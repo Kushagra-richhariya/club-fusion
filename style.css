@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("back2.jpg");
+    background-size: cover;
+    background-position:center;
+    min-height: 100vh;
+}
+header{
+    position:fixed;
+    left: 0;
+    top: 0;
+    padding: 20px 0px;
+    height: 15vh;
+    width: 100%;
+    background: transparent;
+    /* color: white; */
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-between;
+    align-items:center;
+    z-index: 99;
+    
+}
+.navigation a{
+    position: relative;
+    margin-right: 17vh;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+/* some propertise i have copied from login page */
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    background: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+/* copy done */
+
+header .logo{
+    margin-left: 30px;
+    margin-top: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* body part */
+
+/* .wrapper1 {
+    position: relative;
+    height: 65vh;
+    width: 75%;
+    background: transparent;
+    backdrop-filter: blur(15px); 
+    justify-content: center; 
+    text-align: center; 
+    color: white; 
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5); 
+    overflow: hidden;  */
+
+    /* transform: scale(0); */
+    /* transition: transform .5s ease, height .2s ease;*/
+
+/* .wrapper h2{
+    display: flex;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    
+} */
+/* 
+.wrapper .button{
+    font-weight: 600;
+    font-size: 3em;
+    background: transparent;
+    color: white;
+    margin: 50px;
+}
+
+.wrapper .bottom{
+    display: flex;
+    justify-content: space-between;
+   
+    align-items: center;
+}
+.wrapper .btn{
+    font-weight: 00;
+    font-size: 4em;
+    background: transparent;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+} */
+
+/* rough */
+/* .wrapper .btn{
+    height: 100%;
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    outline: none;
+    border-radius: 20px;
+    background: transparent;
+    margin-left: 40px;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+.wrapper .btn:hover{
+    background-color: white;
+    color: #162938;
+} */
+/* 
+.wrapper1{
+    display: inline-flex;
+}
+.wrapper1 .temp{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+.wrapper1 .static{
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.wrapper1 .dynamic{
+    margin-left: 20px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+.dynamic li{
+    list-style: none;
+    color: #be00b1;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(2) infinite;
+}
+
+@keyframes slide{
+    100%{
+        top: -200px;
+    }
+}
+
+.dynamic li span{
+    position: relative;
+}
+
+.dynamic li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border-left: 2px solid #be00b1;
+    animation: typing 3s steps(15) infinite;
+}
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+} */
+
+/* **** */
+/* Wrapper1 Styling */
+.wrapper1 {
+    position: relative;
+    height: 70vh;
+    width: 80%;
+    background: linear-gradient(135deg, rgba(40, 44, 52, 0.8), rgba(72, 61, 139, 0.8));
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+}
+
+/* Wave Text Animation */
+.wave-text {
+    font-size: 3em;
+    font-weight: 600;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.wave-text span {
+    display: inline-block;
+    background: linear-gradient(90deg, #FFD700, #FFA500, #FF6347);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: waterWave 3s infinite ease-in-out;
+}
+
+/* Water Wave Keyframes */
+@keyframes waterWave {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Subtle Animated Background */
+.wrapper1::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+    animation: rotateBackground 10s linear infinite;
+    z-index: -1;
+}
+
+/* Background rotation animation */
+@keyframes rotateBackground {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
